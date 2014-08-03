@@ -39,7 +39,49 @@ endif
 
 " マウス関連 {{{
 if has('mouse')
-  set mouse=a         " 全ての状態でマウスを有効にする
-  set ttymouse=xterm2
+"  set mouse=a         " 全ての状態でマウスを有効にする
+"  set ttymouse=xterm2
 endif
 " }}}
+
+" NeoBundleの読み込み {{{
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+
+call neobundle#rc(expand('~/.vim/bundle'))
+
+" NeoBundle自身をNeoBundleで管理
+NeoBundleFetch 'Shougo/neobundle.vim'
+" }}}
+
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'itchyny/lightline.vim'
+
+" NeoBundleの終了 {{{
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
+" }}}
+
+" lightline.vimの設定 {{{
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+let g:lightline = {}
+let g:lightline.colorscheme = 'solarized'
+let g:lightline.separator = { 'left': '', 'right': '' }
+let g:lightline.subseparator = { 'left': '', 'right': '' }
+" }}}
+
+" 構文強調関連 {{{
+syntax enable
+let g:solarized_termcolors = 256
+let g:solarized_termtrans = 1
+set background=light
+colorscheme solarized
+" }}}
+
+" 改行時にコメントが継続するのを抑制
+autocmd FileType * set formatoptions-=ro
