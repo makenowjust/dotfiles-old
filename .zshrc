@@ -41,4 +41,3 @@ setopt hist_ignore_space
 # プロセス間でヒストリを共有する
 setopt share_history
 # }}}
-o
