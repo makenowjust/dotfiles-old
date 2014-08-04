@@ -41,3 +41,18 @@ setopt hist_ignore_space
 # プロセス間でヒストリを共有する
 setopt share_history
 # }}}
+
+# alias関連 {{{
+# ls関連
+alias ls='ls --color'
+alias lsa='ls -a'
+# clearよりclsの方が打ちやすい
+alias cls='clear'
+# mkdir+cd = take
+alias take='(){ mkdir -p $1; cd $1 }'
+# }}}
+
+# Wine関連 {{{
+export WINEPREFIX=$HOME/.wine
+export WINEARCH=win32
+# }}}
