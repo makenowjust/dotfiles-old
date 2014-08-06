@@ -15,8 +15,13 @@ fi
 
 # GoVMの設定
 if [[ -d ~/.govm ]]; then
-  GOVM_ROOT=$HOME/.govm
-  GOROOT=$GOVM_ROOT/versions/current
+  export GOVM_ROOT=$HOME/.govm
+  export GOROOT=$GOVM_ROOT/versions/current
   export GOPATH=$HOME/develop/go
   path+=($GOROOT/bin $GOPATH/bin)
+fi
+
+# cljinstの設定
+if [[ -d ~/.cljinst ]]; then
+  path+=$HOME/.cljinst
 fi

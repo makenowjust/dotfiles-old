@@ -15,7 +15,7 @@ PROMPT=$PROMPT$'%{\e[48;5;%(?.86;37.160;30)m%} %n '
 PROMPT=$PROMPT$'%{\e[38;5;%(?.86.160);48;5;246m%}%{\e[30m%} %? '
 PROMPT=$PROMPT$' %D %* '
 PROMPT=$PROMPT$' %h '
-PROMPT=$PROMPT$' %\$((\$COLUMNS - 45))>...>%~%>> '
+PROMPT=$PROMPT$' %\$((\$COLUMNS - 50))>...>%~%>> '
 PROMPT=$PROMPT$'%{\e[0;38;5;246m%}%{\e[0m%}\n'
 PROMPT=$PROMPT$'%{\e[30;48;5;238m%} %# %{\e[0;38;5;238m%}%{\e[0m%} '
 # forなどで行が継続したときのためのプロンプトの設定
@@ -50,6 +50,15 @@ alias lsa='ls -a'
 alias cls='clear'
 # mkdir+cd = take
 alias take='(){ mkdir -p $1; cd $1 }'
+# }}}
+
+# ディレクトリ関連 {{{
+setopt auto_cd # ディレクトリ名のみで移動できる
+# }}}
+
+# Hashの設定 {{{
+hash -d dot=$HOME/dotfiles
+hash -d dev=$HOME/develop
 # }}}
 
 # Wine関連 {{{
