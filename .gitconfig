@@ -3,3 +3,6 @@
 	email = make.just.on@gmail.com
 [push]
 	default = matching
+[ghq]
+  root=~/develop/ghq
+  root=~/develop/go/src
