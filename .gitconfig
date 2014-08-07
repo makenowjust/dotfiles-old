@@ -1,8 +1,14 @@
 [user]
-	name = TSUYUSATO Kitsune
-	email = make.just.on@gmail.com
+  name = TSUYUSATO Kitsune
+  email = make.just.on@gmail.com
 [push]
-	default = matching
+  default = matching
+
+# pushのときにhttpが指定されていようとsshを使う
+[url "git@github.com:"]
+  pushInsteadOf = git://github.com
+  pushInsteadOf = https://github.com/
+
 [ghq]
   root=~/develop/ghq
   root=~/develop/go/src

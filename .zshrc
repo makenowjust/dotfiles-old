@@ -50,6 +50,10 @@ alias lsa='ls -a'
 alias cls='clear'
 # mkdir+cd = take
 alias take='(){ mkdir -p $1; cd $1 }'
+
+# ghqのリポジトリ一覧をpecoで選択してcd
+alias ghqcd='cd $(ghq list -p | peco)'
+alias ghqopen='gh-open $(ghq list -p | peco)'
 # }}}
 
 # ディレクトリ関連 {{{

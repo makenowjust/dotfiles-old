@@ -11,6 +11,7 @@ export MANPATH=$HOME/man:
 # nodebrewの設定
 if [[ -d ~/.nodebrew ]]; then
   path+=$HOME/.nodebrew/current/bin
+  fpath+=$HOME/.nodebrew/completions/zsh
 fi
 
 # GoVMの設定
@@ -19,9 +20,18 @@ if [[ -d ~/.govm ]]; then
   export GOROOT=$GOVM_ROOT/versions/current
   export GOPATH=$HOME/develop/go
   path+=($GOROOT/bin $GOPATH/bin)
+
+  # ghqの補完のためにfpathを追加
+  fpath+=$HOME/develop/go/src/github.com/motemen/ghq/zsh
 fi
 
 # cljinstの設定
 if [[ -d ~/.cljinst ]]; then
   path+=$HOME/.cljinst
+fi
+
+# rbenvの設定
+if [[ -d ~/.rbenv ]]; then
+  path+=$HOME/.rbenv/bin
+  eval "$(rbenv init -)"
 fi
