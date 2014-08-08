@@ -51,6 +51,9 @@ alias cls='clear'
 # mkdir+cd = take
 alias take='(){ mkdir -p $1; cd $1 }'
 
+# もうrm -rf ~の悲劇を起こさないために
+alias rm='rm -i'
+
 # ghqのリポジトリ一覧をpecoで選択してcd
 alias ghqcd='cd $(ghq list -p | peco)'
 alias ghqopen='gh-open $(ghq list -p | peco)'
