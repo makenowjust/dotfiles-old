@@ -35,3 +35,12 @@ if [[ -d ~/.rbenv ]]; then
   path+=$HOME/.rbenv/bin
   eval "$(rbenv init -)"
 fi
+
+# GVMの設定
+if [[ -d ~/.gvm ]]; then
+  source $HOME/.gvm/bin/gvm-init.sh
+fi
+
+# その他パスの設定
+# leinなど
+path+=$HOME/develop/bin
