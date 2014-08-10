@@ -44,6 +44,15 @@ if has('mouse')
 endif
 " }}}
 
+" タブ関連 {{{
+set showtabline=2
+" }}}
+
+" エンコーディング関連 {{{
+set fileencodings=utf-8,euc-jp,shift_jis
+set encoding=utf-8
+" }}}
+
 " NeoBundleの読み込み {{{
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
@@ -57,6 +66,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'itchyny/lightline.vim'
+
+" Boo言語関連 {{{
+NeoBundle 'rmartinho/vim-boo'
+" }}}
 
 " NeoBundleの終了 {{{
 call neobundle#end()

@@ -15,7 +15,7 @@ PROMPT=$PROMPT$'%{\e[48;5;%(?.86;37.160;30)m%} %n '
 PROMPT=$PROMPT$'%{\e[38;5;%(?.86.160);48;5;246m%}%{\e[30m%} %? '
 PROMPT=$PROMPT$' %D %* '
 PROMPT=$PROMPT$' %h '
-PROMPT=$PROMPT$' %\$((\$COLUMNS - 50))>...>%~%>> '
+PROMPT=$PROMPT$' %\$((\$COLUMNS - 50))<...<%~%<< '
 PROMPT=$PROMPT$'%{\e[0;38;5;246m%}%{\e[0m%}\n'
 PROMPT=$PROMPT$'%{\e[30;48;5;238m%} %# %{\e[0;38;5;238m%}%{\e[0m%} '
 # forなどで行が継続したときのためのプロンプトの設定
@@ -26,7 +26,7 @@ PROMPT2=$'%{\e[30;48;5;240m%} %_ %{\e[0;38;5;240m%}%{\e[0m%} '
 # ヒストリを保存するファイルの場所
 export HISTFILE=$ZDOTDIR/.zsh_history
 # メモリに保存されるヒストリの件数
-export HISTSIZE=1000
+export HISTSIZE=100000
 # ファイルに保存されるヒストリの件数
 export SAVEHIST=100000
 
