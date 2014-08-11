@@ -50,6 +50,9 @@ alias lsa='ls -a'
 alias cls='clear'
 # mkdir+cd = take
 alias take='(){ mkdir -p $1; cd $1 }'
+# 素のuim-shは編集しにくい
+#alias uim-sh='uim-sh --editline' 日本語が入力できない
+alias uim-sh='rlwrap uim-sh'
 
 # もうrm -rf ~の悲劇を起こさないために
 alias rm='rm -i'
