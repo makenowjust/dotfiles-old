@@ -13,7 +13,7 @@ set notitle       " 端末のタイトルを変更しない
 set shiftwidth=2 " インデントは2文字
 set expandtab    " タブをスペースにする
 set tabstop=2    " タブも2文字のスペースにする
-"}}}
+" }}}
 
 " 移動関連 {{{
 set whichwrap=b
@@ -86,6 +86,10 @@ let g:lightline = {}
 let g:lightline.colorscheme = 'solarized'
 let g:lightline.separator = { 'left': '', 'right': '' }
 let g:lightline.subseparator = { 'left': '', 'right': '' }
+" }}}
+
+" Fortran関連 {{{
+let g:fortran_free_source = 1
 " }}}
 
 " 構文強調関連 {{{

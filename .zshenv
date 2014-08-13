@@ -41,6 +41,17 @@ if [[ -d ~/.gvm ]]; then
   source $HOME/.gvm/bin/gvm-init.sh
 fi
 
+# kerlの設定
+ERL_VERSION=17.1
+if [[ -d ~/develop/erlang/$ERL_VERSION ]]; then
+  source ~/develop/erlang/$ERL_VERSION/activate
+fi
+
+# kiexの設定
+if [[ -s ~/.kiex/scripts/kiex ]]; then
+  source ~/.kiex/scripts/kiex
+fi
+
 # その他パスの設定
-# leinなど
+# lein, kerlなど
 path+=$HOME/develop/bin
