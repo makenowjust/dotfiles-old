@@ -3,6 +3,7 @@
 
 (define skk-style 'skk-style-ddskk-like)
 
+
 (define skk-ja-rk-rule
   (append '(
             ((("z" " ") . ()) ("¡¡" "¡¡" "¡¡"))

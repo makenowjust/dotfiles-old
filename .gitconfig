@@ -1,6 +1,4 @@
-[user]
-  name = TSUYUSATO Kitsune
-  email = make.just.on@gmail.com
+# userは別の場所で設定して、このファイルはincludeする
 [push]
   default = matching
 

@@ -13,6 +13,11 @@ set notitle       " 端末のタイトルを変更しない
 set shiftwidth=2 " インデントは2文字
 set expandtab    " タブをスペースにする
 set tabstop=2    " タブも2文字のスペースにする
+augroup USE_TAB
+  autocmd!
+  autocmd FileType asm setl tabstop=8
+  autocmd FileType makefile,asm,go setl noexpandtab
+augroup END
 " }}}
 
 " 移動関連 {{{
@@ -64,12 +69,26 @@ call neobundle#rc(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 " }}}
 
+NeoBundle 'vim-jp/vimdoc-ja'
+
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'itchyny/lightline.vim'
 
 " Boo言語関連 {{{
 NeoBundle 'rmartinho/vim-boo'
 " }}}
+
+" Go言語関連 {{{
+if $GOROOT != ''
+  set rtp+=$GOROOT/misc/vim
+endif
+" }}}
+
+" Markdown関連 {{{
+augroup MARKDOWN
+  au!
+  au BufNew,BufRead *.md setl ft=markdown
+augroup END
 
 " NeoBundleの終了 {{{
 call neobundle#end()
