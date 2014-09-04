@@ -50,8 +50,10 @@ alias lsa='ls -a'
 alias cls='clear'
 # mkdir+cd = take
 alias take='(){ mkdir -p $1; cd $1 }'
+# xclipでシステムのクリップボードにコピー
+alias xclip='xclip -selection clipboard'
 # 素のuim-shは編集しにくい
-#alias uim-sh='uim-sh --editline' 日本語が入力できない
+#alias uim-sh='uim-sh --editline' #日本語が入力できない
 alias uim-sh='rlwrap uim-sh'
 
 # もうrm -rf ~の悲劇を起こさないために
@@ -60,15 +62,24 @@ alias rm='rm -i'
 # ghqのリポジトリ一覧をpecoで選択してcd
 alias ghqcd='cd $(ghq list -p | peco)'
 alias ghqopen='gh-open $(ghq list -p | peco)'
+
+# gradle
+alias gradle='if [ -x ./gradlew ]; then GRADLE_BIN=./gradlew; else GRADLE_BIN=\gradle; fi; $GRADLE_BIN --daemon'
+
+# /bin/openとか使わないから
+alias open='xdg-open'
+
+# 名前忘れるから
+alias filer='thunar'
 # }}}
 
 # ディレクトリ関連 {{{
-setopt auto_cd # ディレクトリ名のみで移動できる
-# }}}
-
-# Hashの設定 {{{
+# Hashの設定
 hash -d dot=$HOME/dotfiles
 hash -d dev=$HOME/develop
+
+setopt auto_cd # ディレクトリ名のみで移動できる
+cdpath=(~ ~dev) # どこからでもcdできるpath
 # }}}
 
 # Wine関連 {{{

@@ -54,4 +54,5 @@ fi
 
 # その他パスの設定
 # lein, kerlなど
-path+=$HOME/develop/bin
+path=($HOME/develop/bin $path)
+export _JAVA_OPTIONS="-Xmx2g"
