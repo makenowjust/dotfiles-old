@@ -28,17 +28,17 @@ set scrolloff=5
 
 " コピペ関連 {{{
 " ヤンクした内容をクリップボードと共有する
-if has('xterm_clipboard')
-  set clipboard=unnamedplus
-elseif has('clipboard')
-  set clipboard=unnamed
-endif
+"if has('xterm_clipboard')
+"  set clipboard=unnamedplus
+"elseif has('clipboard')
+"  set clipboard=unnamed
+"endif
 
 if has('clipboard')
-  " pで直前にヤンクした内容をペースト
-  nnoremap p "0p
-  " <Space>pでクリップボードの内容をペースト
-  nnoremap <Space>p "*p
+  " <Space>pで直前にヤンクした内容をペースト
+  nnoremap <Space>p "0p
+  " <C-Space>pでクリップボードの内容をペースト
+  nnoremap <C-p> "*p
 endif
 " }}}
 
@@ -74,6 +74,54 @@ NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'itchyny/lightline.vim'
 
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+
+NeoBundle 'digitaltoad/vim-jade'
+
+" {{{ neocomplete.vim
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Optional use
+let g:neocomplete#disable_auto_complete = 1
+" <ctrl><space>で表示
+inoremap <expr><nul> pumvisible() ? "\<down>" : neocomplete#start_manual_complete()
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" }}}
+
+" {{{ neosnippet.vim
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+" }}}
+
 " Boo言語関連 {{{
 NeoBundle 'rmartinho/vim-boo'
 " }}}
@@ -87,8 +135,9 @@ endif
 " Markdown関連 {{{
 augroup MARKDOWN
   au!
-  au BufNew,BufRead *.md setl ft=markdown
+  au BufRead,BufNewFile *.md setl ft=markdown
 augroup END
+" }}}
 
 " NeoBundleの終了 {{{
 call neobundle#end()

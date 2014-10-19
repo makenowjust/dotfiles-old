@@ -52,7 +52,12 @@ if [[ -s ~/.kiex/scripts/kiex ]]; then
   source ~/.kiex/scripts/kiex
 fi
 
+# opamの設定
+. ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
 # その他パスの設定
 # lein, kerlなど
 path=($HOME/develop/bin $path)
 export _JAVA_OPTIONS="-Xmx2g"
+# cabal
+path=($HOME/.cabal/bin $path)

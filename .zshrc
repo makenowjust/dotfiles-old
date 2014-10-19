@@ -30,8 +30,9 @@ export HISTSIZE=100000
 # ファイルに保存されるヒストリの件数
 export SAVEHIST=100000
 
-# 同じコマンドを連続で実行した場合、記録しない
+# 重複を記録しない
 setopt hist_ignore_dups
+setopt hist_ignore_all_dups
 # 実行時刻と終了時刻も保存する
 setopt extended_history
 # すぐにファイルに保存する
