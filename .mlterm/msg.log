@@ -1,0 +1,31 @@
+Nov 15 18:24:46[5959] *** ERROR HAPPEND *** uim: Could not load.
+Nov 15 18:25:35[6360] *** ERROR HAPPEND *** uim: Could not load.
+Nov 15 18:26:30[6360] Font -efont-fixed-medium-r-normal--12-*-iso10646-1 couldn't be loaded.
+Nov 15 18:26:30[6360] Font -efont-biwidth-medium-r-normal--12-*-iso10646-1 couldn't be loaded.
+Nov 15 18:26:30[6360] Font(id 2b1) width(12) is not matched with standard width(14).
+Nov 15 18:26:30[6360] Characters (cs b1) are drawn *one by one* to arrange column width.
+Nov 15 18:26:30[6360] Font(id 2b1) width(6) is not matched with standard width(12).
+Nov 15 18:26:35[6360] Font -efont-fixed-medium-r-normal--12-*-iso10646-1 couldn't be loaded.
+Nov 15 18:26:35[6360] Font -efont-biwidth-medium-r-normal--12-*-iso10646-1 couldn't be loaded.
+Nov 15 18:26:35[6360] Font(id 2b1) width(12) is not matched with standard width(14).
+Nov 15 18:26:35[6360] Characters (cs b1) are drawn *one by one* to arrange column width.
+Nov 15 18:27:12[6360] Font -efont-fixed-medium-r-normal--9-*-iso10646-1 couldn't be loaded.
+Nov 15 18:27:12[6360] Font -efont-biwidth-medium-r-normal--9-*-iso10646-1 couldn't be loaded.
+Nov 15 18:27:12[6360] Font(id 2b1) width(9) is not matched with standard width(12).
+Nov 15 18:27:12[6360] Characters (cs b1) are drawn *one by one* to arrange column width.
+Nov 15 18:27:15[6360] Protocol 5380 is not permitted because client password is wrong.
+Nov 15 18:28:36[7553] *** ERROR HAPPEND *** uim: Could not load.
+Nov 15 18:37:11[10746] *** ERROR HAPPEND *** uim: Could not load.
+Nov 15 18:42:06[12630] Protocol 5380 is not permitted because client password is wrong.
+Nov 15 18:47:40[15534] Font -efont-fixed-medium-r-normal--16-*-iso10646-1 couldn't be loaded.
+Nov 15 18:47:40[15534] Font -efont-biwidth-medium-r-normal--16-*-iso10646-1 couldn't be loaded.
+Nov 15 18:47:40[15534] Font(id 2b1) width(15) is not matched with standard width(20).
+Nov 15 18:47:40[15534] Characters (cs b1) are drawn *one by one* to arrange column width.
+Nov 15 18:47:40[15534] Font(id 2b1) width(10) is not matched with standard width(16).
+Nov 15 18:47:52[15534] Font -efont-fixed-medium-r-normal--16-*-iso10646-1 couldn't be loaded.
+Nov 15 18:47:52[15534] Font -efont-biwidth-medium-r-normal--16-*-iso10646-1 couldn't be loaded.
+Nov 15 18:47:52[15534] Font(id 2b1) width(15) is not matched with standard width(20).
+Nov 15 18:47:52[15534] Characters (cs b1) are drawn *one by one* to arrange column width.
+Nov 15 18:47:52[15534] Font(id 2b1) width(10) is not matched with standard width(16).
+Nov 15 18:48:13[15534] Protocol 5380 is not permitted because client password is wrong.
+Nov 15 19:10:26[25534] Protocol 5380 is not permitted because client password is wrong.

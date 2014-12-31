@@ -1,7 +1,7 @@
 # vim:set foldmethod=marker:
 
 # 補完関連 {{{
-autoload -Uz compinit; compinit
+autoload -Uz compinit; compinit -u
 # 上下左右で補完候補を選択する
 zstyle ':completion:*:default' menu select=1
 # }}}
@@ -11,13 +11,13 @@ zstyle ':completion:*:default' menu select=1
 setopt prompt_subst
 # 左から「ユーザ名」「リターンコード」「日付と時間」「ヒストリ番号」「カレントディレクトリ」
 PROMPT=$'\n'
-PROMPT=$PROMPT$'%{\e[48;5;%(?.86;37.160;30)m%} %n '
+PROMPT=$PROMPT$'%{\e[48;5;%(?.86;30.160;37)m%} %n '
 PROMPT=$PROMPT$'%{\e[38;5;%(?.86.160);48;5;246m%}%{\e[30m%} %? '
 PROMPT=$PROMPT$' %D %* '
 PROMPT=$PROMPT$' %h '
 PROMPT=$PROMPT$' %\$((\$COLUMNS - 50))<...<%~%<< '
 PROMPT=$PROMPT$'%{\e[0;38;5;246m%}%{\e[0m%}\n'
-PROMPT=$PROMPT$'%{\e[30;48;5;238m%} %# %{\e[0;38;5;238m%}%{\e[0m%} '
+PROMPT=$PROMPT$'%{\e[37;48;5;238m%} %# %{\e[0;38;5;238m%}%{\e[0m%} '
 # forなどで行が継続したときのためのプロンプトの設定
 PROMPT2=$'%{\e[30;48;5;240m%} %_ %{\e[0;38;5;240m%}%{\e[0m%} '
 # }}}

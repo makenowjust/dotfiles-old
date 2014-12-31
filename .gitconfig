@@ -7,6 +7,10 @@
   pushInsteadOf = git://github.com
   pushInsteadOf = https://github.com/
 
+# グロバールなgitignoreの設定
+[core]
+	excludesfile = ~/.gitignore-global
+
 [ghq]
   root=~/develop/ghq
   root=~/develop/go/src

@@ -1,3 +1,4 @@
+skip_global_compinit=true
 # ドットファイルを~/dotfilesに置く
 ZDOTDIR=$HOME/dotfiles
 
@@ -53,7 +54,22 @@ if [[ -s ~/.kiex/scripts/kiex ]]; then
 fi
 
 # opamの設定
-. ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+if [[ -d ~/.opam ]]; then
+  source ~/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+fi
+
+# svmの設定
+if [[ -d ~/.svm ]]; then
+  path+=$HOME/.svm/current/rt/bin
+fi
+
+# linuxbrewの設定
+if [[ -d ~/.linuxbrew ]]; then
+  path=($HOME/.linuxbrew/bin $path)
+  export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+  export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+  export PKG_CONFIG_PATH="$HOME/.linuxbrew/lib64/pkgconfig:$HOME/.linuxbrew/lib/pkgconfig:$PKG_CONFIG_PATH"
+fi
 
 # その他パスの設定
 # lein, kerlなど
@@ -61,3 +77,7 @@ path=($HOME/develop/bin $path)
 export _JAVA_OPTIONS="-Xmx2g"
 # cabal
 path=($HOME/.cabal/bin $path)
+# dart
+export DART_CONFIGURATION=ReleaseX64
+# java
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle

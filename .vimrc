@@ -80,6 +80,12 @@ NeoBundle 'Shougo/neosnippet-snippets'
 
 NeoBundle 'digitaltoad/vim-jade'
 
+NeoBundle 'dart-lang/dart-vim-plugin'
+
+NeoBundle 'wavded/vim-stylus'
+
+NeoBundle 'jponge/vim-golo'
+
 " {{{ neocomplete.vim
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -132,8 +138,15 @@ if $GOROOT != ''
 endif
 " }}}
 
+" LFE関連 {{{
+augroup LFE
+  au!
+  au BufRead,BufNewFile *.lfe setl ft=lisp
+augroup END
+" }}}
+
 " Markdown関連 {{{
-augroup MARKDOWN
+augroup Markdown
   au!
   au BufRead,BufNewFile *.md setl ft=markdown
 augroup END

@@ -1,0 +1,26 @@
+# 背景を透明にする(75%）
+use_transbg = true
+alpha = 223
+brightness=50
+
+# 1024行のログを保存する
+logsize=1024
+
+# フォントの設定（12px、アンチエイリアス）
+fontsize=12
+line_space=5
+use_anti_alias=true
+use_multi_column_char=true
+use_variable_column_width=true
+
+# 背景色と文字色
+fg_color=#657b83
+bg_color=#fdf6e3
+
+# IM
+input_method=uim
+
+# スクロールバー
+use_scrollbar = true
+scrollbar_mode = right
+scrollbar_view_name = mozmodern
