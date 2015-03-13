@@ -9,7 +9,7 @@
 
 # グロバールなgitignoreの設定
 [core]
-	excludesfile = ~/.gitignore-global
+  excludesfile = ~/.gitignore-global
 
 [ghq]
   root=~/develop/ghq
